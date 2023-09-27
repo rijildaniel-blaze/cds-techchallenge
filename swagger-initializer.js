@@ -16,6 +16,10 @@ window.onload = function() {
     layout: "StandaloneLayout"
   });
 
-  document.getElementsByClassName('download-url-input')[0].value = ""
+  setTimeout(function(){
+    document.getElementsByClassName('download-url-input')[0].value = ""
+  }, 800);
+
+  
   //</editor-fold>
 };
