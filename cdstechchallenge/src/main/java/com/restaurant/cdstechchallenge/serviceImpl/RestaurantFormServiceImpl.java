@@ -37,6 +37,17 @@ public class RestaurantFormServiceImpl implements RestaurantFormService {
             }
         });
     }
+    public RestaurantFormServiceImpl(RestaurantSubmittedListRepository restaurantSubmittedListRepository, ModelMapper modelMapper, Random random) {
+        this.restaurantSubmittedListRepository = restaurantSubmittedListRepository;
+        this.modelMapper = modelMapper;
+        this.modelMapper.addMappings(new PropertyMap<SubmitRestaurantRequest, RestaurantSubmittedList>() {
+            @Override
+            protected void configure() {
+                skip(destination.getId());
+            }
+        });
+        this.random = random;
+    }
 
     @Override
     public RestaurantSubmittedList submitRestaurant(Integer id, SubmitRestaurantRequest submitRestaurantRequest) {
@@ -64,6 +75,7 @@ public class RestaurantFormServiceImpl implements RestaurantFormService {
     @Override
     public void deleteRestaurant(Integer id) {
         restaurantSubmittedListRepository.deleteById(id);
+        System.out.println("Deleted the restaurant with ID - " + id);
     }
 
     @Override

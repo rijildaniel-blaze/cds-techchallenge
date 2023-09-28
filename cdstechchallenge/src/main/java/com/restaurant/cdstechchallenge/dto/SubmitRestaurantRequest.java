@@ -6,6 +6,12 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class SubmitRestaurantRequest {
+    public SubmitRestaurantRequest() {
+    }
+
+    public SubmitRestaurantRequest(String name) {
+        this.name = name;
+    }
 
     @NotNull(message = "Provide some value cannot be null")
     @NotEmpty(message = "Provide some value cannot be empty")

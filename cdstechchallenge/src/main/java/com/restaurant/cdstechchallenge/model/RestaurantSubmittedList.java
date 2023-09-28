@@ -6,6 +6,14 @@ import jakarta.persistence.*;
 @Table(name = "restaurant_submitted_list")
 public class RestaurantSubmittedList {
 
+    public RestaurantSubmittedList() {
+    }
+
+    public RestaurantSubmittedList(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
