@@ -11,5 +11,5 @@
 
 Now, you can check out the application functionalities.
 
-Backend API Documentation - [Swagger Documentation](https://rijildaniel-blaze.github.io/cds-techchallenge/)
+Backend API Documentation - [Swagger Documentation](https://rijildaniel-blaze.github.io/cds-techchallenge/) / [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
